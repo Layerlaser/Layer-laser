@@ -1,141 +1,65 @@
 <!doctype html>
 <html lang="en-AU">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Layer & Laser — Wedding Order Form</title>
-<style>
-:root{
---bg:#0b0f14; --card:#121826; --text:#e8eefc; --muted:#a9b4cc; --line:#26324a;
---gold:#caa45a; --rustic:#c46a2f; --good:#7dffb2;
-
---paper:#ffffff; --ink:#111; --ink-muted:#333; --paper-line:#ddd;
-}
-*{box-sizing:border-box}
-body{
-margin:0;
-font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
-background:
-radial-gradient(1100px 600px at 12% 0%, rgba(196,106,47,.12), transparent 60%),
-radial-gradient(900px 600px at 92% 10%, rgba(202,164,90,.12), transparent 55%),
-var(--bg);
-color:var(--text);
-line-height:1.5;
-}
-.page{max-width:980px;margin:28px auto;padding:0 16px 64px}
-.hero{
-border:1px solid rgba(38,50,74,.9);
-border-radius:18px;
-padding:18px;
-background: rgba(18,24,38,.92);
-text-align:center;
-}
-.badges{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:10px}
-.badge{
-display:inline-flex;align-items:center;gap:8px;
-padding:8px 12px;border-radius:999px;
-border:1px solid rgba(38,50,74,.9);
-background: rgba(11,15,20,.35);
-font-weight:900;letter-spacing:.8px;font-size:12px;
-}
-.dot{width:10px;height:10px;border-radius:50%;background:var(--rustic);box-shadow:0 0 0 4px rgba(196,106,47,.15)}
-h1{margin:8px 0 0;font-size:22px}
-.sub{margin:6px 0 0;color:var(--muted);font-size:13px}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
-.card{
-background: rgba(18,24,38,.92);
-border:1px solid rgba(38,50,74,.9);
-border-radius:18px;
-padding:18px;
-}
-h2{margin:0 0 10px;font-size:16px}
-label{display:block;font-size:13px;color:var(--muted);margin:10px 0 6px}
-input, select, textarea{
-width:100%;
-border-radius:12px;
-border:1px solid rgba(38,50,74,.9);
-background: rgba(11,15,20,.35);
-color:var(--text);
-padding:10px 12px;
-outline:none;
-font-size:14px;
-}
-textarea{min-height:96px;resize:vertical}
-.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.btnbar{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
-button{
-border:1px solid rgba(38,50,74,.9);
-background: rgba(11,15,20,.35);
-color:var(--text);
-padding:10px 12px;
-border-radius:12px;
-font-weight:900;
-cursor:pointer;
-font-size:13px;
-}
-button.primary{
-border-color: rgba(125,255,178,.35);
-background: rgba(125,255,178,.12);
-}
-button.danger{
-border-color: rgba(255,122,122,.35);
-background: rgba(255,122,122,.10);
-}
-table{
-width:100%;
-border-collapse:collapse;
-border:1px solid rgba(38,50,74,.9);
-border-radius:14px;
-overflow:hidden;
-margin-top:10px;
-}
-th,td{
-padding:10px 10px;
-border-bottom:1px solid rgba(38,50,74,.75);
-text-align:left;
-font-size:13px;
-}
-th{
-background: rgba(11,15,20,.45);
-color: var(--muted);
-text-transform:uppercase;
-letter-spacing:.6px;
-font-size:12px;
-font-weight:900;
-}
-tr:last-child td{border-bottom:none}
-.small{color:var(--muted);font-size:12px;margin-top:8px}
-.footer{
-margin-top:16px;
-display:flex;gap:10px;flex-wrap:wrap;justify-content:space-between;
-color:var(--muted);font-size:12px;
-}
-.chip{
-border:1px solid rgba(38,50,74,.9);
-background: rgba(11,15,20,.35);
-padding:8px 10px;border-radius:12px;
-}
-.req{color:#ffd37a;font-weight:900}
-@media (max-width: 920px){
-.grid{grid-template-columns:1fr}
-.row{grid-template-columns:1fr}
-}
-
-/* PRINT FRIENDLY */
-@media print{
-body{background:var(--paper)!important;color:var(--ink)!important}
-.hero,.card{background:var(--paper)!important;border:1px solid var(--paper-line)!important}
-input,select,textarea{background:#fff!important;color:var(--ink)!important;border-color:var(--paper-line)!important}
-th{background:#fff!important;color:var(--ink-muted)!important;border-bottom:1px solid var(--paper-line)!important}
-td{border-bottom:1px solid var(--paper-line)!important}
-.badge,.chip,button{display:none!important}
-.sub,.small,.footer,label{color:var(--ink-muted)!important}
-.page{margin:0;max-width:none;padding:0 10mm}
-}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Wedding Order Form | Layer &amp; Laser NT</title>
+  <meta name="description" content="Wedding order form (CSV) for bridal party items, signage and keepsakes." />
+  <meta name="theme-color" content="#070a10" />
+  <link rel="icon" href="assets/logo.jpg" />
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
-<div class="page">
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav">
+  <div class="container">
+    <div class="nav-inner">
+      <a class="brand" href="index.html" aria-label="Layer & Laser home">
+        <img src="assets/logo.jpg" alt="Layer & Laser logo" />
+        <div style="min-width:0">
+          <div class="name">Layer & Laser</div>
+          <div class="badges">
+            <span class="badge"><span class="dot"></span>MADE IN THE NT</span>
+            <span class="badge">3D PRINTING &amp; ENGRAVING</span>
+          </div>
+        </div>
+      </a>
+
+      <button class="nav-btn" type="button" data-navbtn aria-expanded="false" aria-controls="menu">Menu</button>
+
+      <nav id="menu" class="menu" data-menu>
+          <a href="index.html">Home</a>
+          <a href="weddings.html">Weddings</a>
+          <a href="wedding-order.html" aria-current="page">Wedding Form</a>
+          <a href="corporate.html">Corporate</a>
+          <a href="corporate-order.html">Corporate Form</a>
+          <a href="retail.html">Retail</a>
+          <a href="real-estate.html">Real Estate</a>
+          <a href="cafe.html">Café</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+
+<section class="hero">
+  <div class="container">
+    <div class="panel">
+      <h1 class="h1">Wedding Order Form</h1>
+      <p class="sub">Fill out the form, download CSV, and email it back.</p>
+      <div class="cta"><a class="btn secondary" href="index.html">Home</a><a class="btn " href="gallery.html">Gallery</a></div>
+    </div>
+  </div>
+</section>
+
+
+<main id="main">
+  <div class="container content-wrap">
+    <div class="panel">
+      <div class="prose">
+        <div class="page">
 <section class="hero">
 <div class="badges">
 <div class="badge"><span class="dot"></span>MADE IN THE NT</div>
@@ -235,9 +159,9 @@ td{border-bottom:1px solid var(--paper-line)!important}
 <textarea id="notes" placeholder="Any important details: icons, dates, special characters, colour splits, etc."></textarea>
 
 <div class="btnbar">
-<button class="primary" type="button" onclick="downloadCSV()">Download CSV</button>
-<button type="button" onclick="window.print()">Print</button>
-<button class="danger" type="button" onclick="clearAll()">Clear Form</button>
+<button class="primary" type="button">Download CSV</button>
+<button type="button">Print</button>
+<button class="danger" type="button">Clear Form</button>
 </div>
 
 <div class="small">
@@ -306,9 +230,9 @@ Tip: Add all items on the right (tumblers, signs, ring boxes, etc) before downlo
 <input id="itemNotes" placeholder="e.g. add wedding date underneath / all caps" />
 
 <div class="btnbar">
-<button class="primary" type="button" onclick="addItem()">Add Item</button>
-<button type="button" onclick="removeLast()">Remove Last</button>
-<button type="button" onclick="clearItems()">Clear Items</button>
+<button class="primary" type="button">Add Item</button>
+<button type="button">Remove Last</button>
+<button type="button">Clear Items</button>
 </div>
 
 <table aria-label="Items table">
@@ -341,154 +265,23 @@ When finished, click <strong>Download CSV</strong> on the left. The CSV includes
 </div>
 </div>
 
-<script>
-const items = [];
 
-function escCSV(value){
-const s = (value ?? "").toString();
-if (/[",\n]/.test(s)) return `"${s.replace(/"/g,'""')}"`;
-return s;
-}
-function getVal(id){ return document.getElementById(id).value.trim(); }
+      </div>
+    </div>
+  </div>
+</main>
 
-function addItem(){
-const itemType = getVal('itemType') || 'Tumbler';
-const qty = parseInt(getVal('qtyItem') || '1', 10);
-const text = getVal('engraveText');
-if(!text){ alert('Please enter engraving text (exact).'); return; }
-if(!Number.isFinite(qty) || qty < 1){ alert('Qty must be 1 or more.'); return; }
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="chip"><strong style="color:var(--text)">Layer &amp; Laser</strong> • Humpty Doo, NT</div>
+      <div class="chip"><strong style="color:var(--text)">Phone:</strong> 0459289044</div>
+      <div class="chip"><strong style="color:var(--text)">Email:</strong> layerandlaser1@gmail.com</div>
+    </div>
+    <p style="margin:12px 0 0">Minimum charge $25 AUD • Quote valid for 14 days • Made in the NT</p>
+  </div>
+</footer>
 
-items.push({
-itemType,
-qty,
-text,
-role: getVal('role'),
-placement: getVal('placement') || 'Center',
-material: getVal('material'),
-colour: getVal('colour'),
-notes: getVal('itemNotes')
-});
 
-document.getElementById('qtyItem').value = '1';
-document.getElementById('engraveText').value = '';
-document.getElementById('role').value = '';
-document.getElementById('material').value = '';
-document.getElementById('colour').value = '';
-document.getElementById('itemNotes').value = '';
-renderItems();
-}
-
-function removeLast(){
-items.pop();
-renderItems();
-}
-function clearItems(){
-items.length = 0;
-renderItems();
-}
-
-function renderItems(){
-const body = document.getElementById('itemsBody');
-body.innerHTML = '';
-items.forEach((it, i) => {
-const tr = document.createElement('tr');
-tr.innerHTML = `
-<td>${i+1}</td>
-<td>${it.itemType}</td>
-<td>${it.qty}</td>
-<td>${it.text}</td>
-<td>${it.role || ''}</td>
-<td>${it.placement}</td>
-<td>${it.material || ''}</td>
-<td>${it.colour || ''}</td>
-<td>${it.notes || ''}</td>
-`;
-body.appendChild(tr);
-});
-}
-
-function downloadCSV(){
-// Validate required fields
-const couple = getVal('coupleNames');
-const weddingDate = getVal('weddingDate');
-const contactName = getVal('contactName');
-const email = getVal('contactEmail');
-const requiredBy = getVal('requiredBy');
-
-if(!couple){ alert('Please enter Couple Names.'); return; }
-if(!weddingDate){ alert('Please enter Wedding Date.'); return; }
-if(!contactName){ alert('Please enter Contact Name.'); return; }
-if(!email){ alert('Please enter Contact Email.'); return; }
-if(!requiredBy){ alert('Please enter Required By date.'); return; }
-if(items.length === 0){ alert('Please add at least one item to the Items List.'); return; }
-
-const header1 = [
-"OrderRef","WeddingDate","CoupleNames","ContactName","ContactPhone","ContactEmail",
-"RequiredByDate","DeliveryMethod","DeliveryAddress","PackageChoice","MockupRequired",
-"FontChoice","StylePreference","Notes"
-];
-
-const row1 = [
-getVal('orderRef'),
-weddingDate,
-couple,
-contactName,
-getVal('contactPhone'),
-email,
-requiredBy,
-getVal('deliveryMethod'),
-getVal('address'),
-getVal('packageChoice'),
-getVal('mockupRequired'),
-getVal('fontChoice'),
-getVal('style'),
-getVal('notes')
-];
-
-let csv = '';
-csv += header1.map(escCSV).join(',') + '\n';
-csv += row1.map(escCSV).join(',') + '\n\n';
-
-csv += ["ItemID","ItemType","Qty","EngravingText","Role","Placement","MaterialOrSize","ColourOrFinish","Notes"].join(',') + '\n';
-items.forEach((it, i) => {
-const r = [
-(i+1).toString(),
-it.itemType,
-it.qty.toString(),
-it.text,
-it.role,
-it.placement,
-it.material,
-it.colour,
-it.notes
-];
-csv += r.map(escCSV).join(',') + '\n';
-});
-
-const safeCouple = couple.replace(/[^a-z0-9]+/gi,'_').replace(/^_+|_+$/g,'');
-const ref = (getVal('orderRef') || 'Wedding_Order').replace(/[^a-z0-9]+/gi,'_');
-const filename = `LayerAndLaser_${safeCouple}_${ref}.csv`;
-
-const blob = new Blob([csv], {type: 'text/csv;charset=utf-8;'});
-const url = URL.createObjectURL(blob);
-const a = document.createElement('a');
-a.href = url;
-a.download = filename;
-document.body.appendChild(a);
-a.click();
-a.remove();
-URL.revokeObjectURL(url);
-}
-
-function clearAll(){
-if(!confirm('Clear all fields and items?')) return;
-[
-'orderRef','weddingDate','coupleNames','contactName','contactPhone','contactEmail',
-'requiredBy','address','fontChoice','notes'
-].forEach(id => document.getElementById(id).value = '');
-['deliveryMethod','packageChoice','mockupRequired','style'].forEach(id => document.getElementById(id).selectedIndex = 0);
-clearItems();
-}
-</script>
 </body>
 </html>

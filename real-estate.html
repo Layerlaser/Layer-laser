@@ -1,114 +1,67 @@
 <!doctype html>
 <html lang="en-AU">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Layer & Laser — Real Estate Settlement Gifts</title>
-<style>
-:root{
---bg:#0b0f14; --card:#121826; --text:#e8eefc; --muted:#a9b4cc; --line:#26324a;
---accent:#7aa2ff; --nt:#ff6a00; --good:#7dffb2;
---paper:#ffffff; --ink:#111; --ink-muted:#333; --paper-line:#ddd;
-}
-*{box-sizing:border-box}
-body{
-margin:0;
-font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
-background:
-radial-gradient(1100px 700px at 12% 0%, rgba(122,162,255,.12), transparent 60%),
-radial-gradient(900px 600px at 90% 10%, rgba(255,106,0,.10), transparent 55%),
-var(--bg);
-color:var(--text);
-line-height:1.55;
-}
-.page{max-width:980px;margin:28px auto;padding:0 16px 64px}
-.topbar{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-bottom:14px}
-.btn{
-border:1px solid rgba(38,50,74,.9);
-background: rgba(11,15,20,.35);
-color:var(--text);
-padding:10px 12px;
-border-radius:12px;
-font-weight:900;
-font-size:13px;
-cursor:pointer;
-}
-.btn.primary{border-color: rgba(122,162,255,.35);background: rgba(122,162,255,.12);}
-.hero{
-border:1px solid rgba(38,50,74,.9);
-border-radius:18px;
-padding:18px;
-background: rgba(18,24,38,.92);
-text-align:center;
-}
-.logo img{max-width:420px;width:100%;height:auto;display:block;margin:0 auto 10px}
-.badges{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
-.badge{
-display:inline-flex;align-items:center;gap:8px;
-padding:8px 12px;border-radius:999px;
-border:1px solid rgba(38,50,74,.9);
-background: rgba(11,15,20,.35);
-font-weight:900;letter-spacing:.8px;font-size:12px;
-}
-.dot{width:10px;height:10px;border-radius:50%;background:var(--nt);box-shadow:0 0 0 4px rgba(255,106,0,.15)}
-h1{margin:10px 0 4px;font-size:22px}
-.sub{margin:0;color:var(--muted);font-size:13px}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
-.card{
-background: rgba(18,24,38,.92);
-border:1px solid rgba(38,50,74,.9);
-border-radius:18px;
-padding:18px;
-}
-h2{margin:0 0 10px;font-size:16px}
-table{
-width:100%;border-collapse:collapse;
-border:1px solid rgba(38,50,74,.9);
-border-radius:14px;overflow:hidden;margin-top:10px
-}
-th,td{padding:12px;border-bottom:1px solid rgba(38,50,74,.75);text-align:left;font-size:14px}
-th{background: rgba(11,15,20,.45);color: var(--muted);text-transform:uppercase;letter-spacing:.6px;font-size:12px;font-weight:900}
-tr:last-child td{border-bottom:none}
-.price{color:var(--good);font-weight:950}
-.note{margin:10px 0 0;color:var(--muted);font-size:13px}
-label{display:block;font-size:13px;color:var(--muted);margin:10px 0 6px}
-input,select,textarea{
-width:100%;
-border-radius:12px;
-border:1px solid rgba(38,50,74,.9);
-background: rgba(11,15,20,.35);
-color:var(--text);
-padding:10px 12px;
-font-size:14px;
-outline:none;
-}
-textarea{min-height:92px;resize:vertical}
-.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.footer{margin-top:16px;display:flex;gap:10px;flex-wrap:wrap;justify-content:space-between;color:var(--muted);font-size:12px}
-.chip{border:1px solid rgba(38,50,74,.9);background:rgba(11,15,20,.35);padding:8px 10px;border-radius:12px}
-.small{color:var(--muted);font-size:12px;margin-top:8px}
-@media (max-width: 920px){.grid{grid-template-columns:1fr}.row{grid-template-columns:1fr}}
-
-/* PRINT FRIENDLY */
-@media print{
-body{background:var(--paper)!important;color:var(--ink)!important}
-.topbar{display:none!important}
-.hero,.card{background:var(--paper)!important;border:1px solid var(--paper-line)!important}
-.sub,.note,.footer,.small,label{color:var(--ink-muted)!important}
-input,select,textarea{background:#fff!important;color:var(--ink)!important;border-color:var(--paper-line)!important}
-table{border-color:var(--paper-line)!important}
-th{background:#fff!important;color:var(--ink-muted)!important;border-bottom:1px solid var(--paper-line)!important}
-td{border-bottom:1px solid var(--paper-line)!important}
-.badge,.chip,.btn{display:none!important}
-.price{color:#0a7a3d!important}
-.page{margin:0;max-width:none;padding:0 10mm}
-}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Real Estate Pricing | Layer &amp; Laser NT</title>
+  <meta name="description" content="Real estate settlement gift pricing and agency programs in NT." />
+  <meta name="theme-color" content="#070a10" />
+  <link rel="icon" href="assets/logo.jpg" />
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
-<div class="page">
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav">
+  <div class="container">
+    <div class="nav-inner">
+      <a class="brand" href="index.html" aria-label="Layer & Laser home">
+        <img src="assets/logo.jpg" alt="Layer & Laser logo" />
+        <div style="min-width:0">
+          <div class="name">Layer & Laser</div>
+          <div class="badges">
+            <span class="badge"><span class="dot"></span>MADE IN THE NT</span>
+            <span class="badge">3D PRINTING &amp; ENGRAVING</span>
+          </div>
+        </div>
+      </a>
+
+      <button class="nav-btn" type="button" data-navbtn aria-expanded="false" aria-controls="menu">Menu</button>
+
+      <nav id="menu" class="menu" data-menu>
+          <a href="index.html">Home</a>
+          <a href="weddings.html">Weddings</a>
+          <a href="wedding-order.html">Wedding Form</a>
+          <a href="corporate.html">Corporate</a>
+          <a href="corporate-order.html">Corporate Form</a>
+          <a href="retail.html">Retail</a>
+          <a href="real-estate.html" aria-current="page">Real Estate</a>
+          <a href="cafe.html">Café</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+
+<section class="hero">
+  <div class="container">
+    <div class="panel">
+      <h1 class="h1">Real Estate</h1>
+      <p class="sub">Settlement gifts and agency gifting programs.</p>
+      <div class="cta"><a class="btn secondary" href="index.html">Home</a><a class="btn " href="gallery.html">Gallery</a></div>
+    </div>
+  </div>
+</section>
+
+
+<main id="main">
+  <div class="container content-wrap">
+    <div class="panel">
+      <div class="prose">
+        <div class="page">
 <div class="topbar">
-<button class="btn primary" onclick="window.print()">Print / Save as PDF</button>
+<button class="btn primary">Print / Save as PDF</button>
 <div class="sub">Real estate template • Humpty Doo, NT</div>
 </div>
 
@@ -196,8 +149,8 @@ td{border-bottom:1px solid var(--paper-line)!important}
 <textarea id="details" placeholder="Example: 20 wine boxes, agency logo + client surname, black fill, gift-ready packaging. Logo is SVG."></textarea>
 
 <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
-<button class="btn primary" type="button" onclick="downloadRECSV()">Download CSV</button>
-<button class="btn" type="button" onclick="clearRE()">Clear</button>
+<button class="btn primary" type="button">Download CSV</button>
+<button class="btn" type="button">Clear</button>
 </div>
 
 <p class="small">Email the CSV to: <strong style="color:var(--text)">layerandlaser1@gmail.com</strong></p>
@@ -211,42 +164,23 @@ td{border-bottom:1px solid var(--paper-line)!important}
 </div>
 </div>
 
-<script>
-function escCSV(v){
-const s=(v??"").toString();
-return (/[",\n]/.test(s)) ? `"${s.replace(/"/g,'""')}"` : s;
-}
-function v(id){ return document.getElementById(id).value.trim(); }
 
-function downloadRECSV(){
-const agency=v('agency');
-const contact=v('contact');
-const email=v('email');
-const qty=v('qty');
-if(!agency){ alert('Please enter agency name'); return; }
-if(!contact){ alert('Please enter contact name'); return; }
-if(!email){ alert('Please enter email'); return; }
-if(!qty){ alert('Please enter quantity'); return; }
+      </div>
+    </div>
+  </div>
+</main>
 
-const header=["AgencyName","NeededByDate","ContactName","Phone","Email","GiftType","Quantity","Details"];
-const row=[agency,v('neededBy'),contact,v('phone'),email,v('giftType'),qty,v('details')];
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="chip"><strong style="color:var(--text)">Layer &amp; Laser</strong> • Humpty Doo, NT</div>
+      <div class="chip"><strong style="color:var(--text)">Phone:</strong> 0459289044</div>
+      <div class="chip"><strong style="color:var(--text)">Email:</strong> layerandlaser1@gmail.com</div>
+    </div>
+    <p style="margin:12px 0 0">Minimum charge $25 AUD • Quote valid for 14 days • Made in the NT</p>
+  </div>
+</footer>
 
-let csv = header.map(escCSV).join(',') + "\n" + row.map(escCSV).join(',') + "\n";
-const safe = agency.replace(/[^a-z0-9]+/gi,'_').replace(/^_+|_+$/g,'');
-const filename = `LayerAndLaser_RealEstate_${safe}.csv`;
 
-const blob = new Blob([csv], {type:'text/csv;charset=utf-8;'});
-const url = URL.createObjectURL(blob);
-const a=document.createElement('a');
-a.href=url; a.download=filename;
-document.body.appendChild(a); a.click(); a.remove();
-URL.revokeObjectURL(url);
-}
-
-function clearRE(){
-['agency','neededBy','contact','phone','email','qty','details'].forEach(id=>document.getElementById(id).value='');
-document.getElementById('giftType').selectedIndex=0;
-}
-</script>
 </body>
 </html>

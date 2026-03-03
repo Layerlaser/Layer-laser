@@ -1,95 +1,67 @@
 <!doctype html>
 <html lang="en-AU">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Layer & Laser — Wedding Pricing Guide</title>
-<style>
-:root{
---bg:#0b0f14;
---card:#121826;
---text:#e8eefc;
---muted:#a9b4cc;
---line:#26324a;
---accent:#caa45a;
---rustic:#c46a2f;
---paper:#fbf7ef;
---ink:#1b1b1b;
---ink-muted:#4a4a4a;
---paper-line:#e7dcc8;
-}
-*{box-sizing:border-box}
-body{
-margin:0;
-font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial;
-background:
-radial-gradient(1200px 700px at 12% 0%, rgba(196,106,47,.12), transparent 60%),
-radial-gradient(900px 600px at 92% 10%, rgba(202,164,90,.10), transparent 55%),
-var(--bg);
-color:var(--text);
-line-height:1.55;
-}
-.page{max-width: 980px;margin: 32px auto;padding: 0 16px 64px;}
-.topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:14px;}
-.btn{border:1px solid rgba(38,50,74,.9);background: rgba(11,15,20,.35);color:var(--text);padding:10px 12px;border-radius:12px;font-weight:700;font-size:13px;cursor:pointer;}
-.btn.primary{border-color: rgba(202,164,90,.5);background: rgba(202,164,90,.12);}
-.hero{border:1px solid rgba(38,50,74,.9);border-radius: 18px;overflow:hidden;background: rgba(18,24,38,.92);}
-.hero-inner{padding: 18px;display:grid;grid-template-columns: 1fr;gap: 14px;text-align:center;}
-.logo img{max-width: 420px;width:100%;height:auto;display:block;margin: 0 auto;}
-.badge-row{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top: 6px;}
-.badge{display:inline-flex;align-items:center;gap:8px;padding: 8px 12px;border-radius:999px;border:1px solid rgba(38,50,74,.9);background: rgba(11,15,20,.35);font-weight:800;letter-spacing:.8px;font-size:12px;}
-.badge .dot{width:10px;height:10px;border-radius:50%;background: var(--rustic);box-shadow: 0 0 0 4px rgba(196,106,47,.15);}
-.title{margin: 8px 0 0;font-size: 22px;letter-spacing:.3px;}
-.subtitle{margin: 4px 0 0;color: var(--muted);font-size: 13px;}
-.grid{display:grid;grid-template-columns: 1fr 1fr;gap: 16px;margin-top: 16px;}
-.card{background: rgba(18,24,38,.92);border:1px solid rgba(38,50,74,.9);border-radius: 18px;padding: 18px;}
-h2{margin:0 0 10px;font-size:16px;letter-spacing:.2px;}
-.hint{margin:-6px 0 10px;color: var(--muted);font-size:13px;}
-table{width:100%;border-collapse:collapse;border-radius: 14px;overflow:hidden;border:1px solid rgba(38,50,74,.9);margin-top: 10px;}
-th,td{padding:12px;border-bottom:1px solid rgba(38,50,74,.75);text-align:left;font-size:14px;}
-th{background: rgba(11,15,20,.45);color: var(--muted);font-weight:800;text-transform: uppercase;letter-spacing:.6px;font-size:12px;}
-tr:last-child td{border-bottom:none}
-.price{font-weight:900;color: #7dffb2;}
-.note{margin: 10px 0 0;color: var(--muted);font-size: 13px;}
-.callout{margin-top: 12px;padding: 12px;border-radius: 14px;border:1px solid rgba(202,164,90,.35);background: rgba(202,164,90,.10);color:#ffe7b5;font-size: 13px;}
-.list{margin: 10px 0 0;padding-left: 18px;color: var(--muted);font-size: 13px;}
-.footer{margin-top: 16px;display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between;color: var(--muted);font-size: 12px;}
-.contact{display:flex;gap:10px;flex-wrap:wrap;align-items:center;}
-.chip{border:1px solid rgba(38,50,74,.9);background: rgba(11,15,20,.35);padding: 8px 10px;border-radius: 12px;}
-strong{color:var(--text)}
-.packages{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-top:16px;}
-.pkg{background: rgba(18,24,38,.92);border:1px solid rgba(38,50,74,.9);border-radius:18px;padding:18px;}
-.pkg h3{margin:0 0 6px;font-size:15px}
-.tag{display:inline-block;margin:6px 0 10px;padding:6px 10px;border-radius:999px;border:1px solid rgba(38,50,74,.9);background: rgba(11,15,20,.35);color: var(--muted);font-size:12px;font-weight:800;letter-spacing:.4px;}
-.pkg ul{margin:10px 0 0;padding-left:18px;color: var(--muted);font-size:13px}
-.pkg .bigprice{margin-top:12px;font-size:20px;font-weight:950;color:#7dffb2}
-.pkg .save{margin-top:4px;color:#ffe7b5;font-size:12px}
-.checklist{margin-top:18px;background:rgba(18,24,38,.92);border:1px solid rgba(38,50,74,.9);border-radius:12px;padding:16px;}
-.checklist h3{margin:0 0 10px}
-.checklist ol{margin:0;padding-left:18px;color:var(--muted);line-height:1.6}
-.checklist li{margin:8px 0}
-.example{color:#fff7e6;background:rgba(202,164,90,.10);padding:8px;border-radius:8px;margin-top:8px;font-size:13px}
-@media (max-width: 980px){.packages{grid-template-columns:1fr} .grid{grid-template-columns:1fr}}
-/* PRINT FRIENDLY */
-@media print{
-body{background:#fff !important; color:var(--ink) !important;}
-.topbar{display:none !important;}
-.hero, .card, .pkg, .checklist{background: var(--paper) !important;border:1px solid var(--paper-line) !important;}
-.subtitle, .hint, .note, .list, .footer, .tag, .pkg ul{color: var(--ink-muted) !important;}
-table{border-color: var(--paper-line) !important;}
-th{background:#fff !important;color: var(--ink-muted) !important;border-bottom:1px solid var(--paper-line) !important;}
-td{border-bottom:1px solid var(--paper-line) !important;}
-.badge, .chip, .tag{background:#fff !important;border-color: var(--paper-line) !important;color: var(--ink) !important;}
-.price, .pkg .bigprice{color:#0a7a3d !important;}
-.callout{background:#fff !important;border-color: var(--paper-line) !important;color: var(--ink) !important;}
-.page{margin:0; max-width:none; padding:0 10mm;}
-}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Wedding Pricing | Layer &amp; Laser NT</title>
+  <meta name="description" content="Wedding pricing for tumblers, signage and keepsakes in the Northern Territory." />
+  <meta name="theme-color" content="#070a10" />
+  <link rel="icon" href="assets/logo.jpg" />
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
-<div class="page">
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav">
+  <div class="container">
+    <div class="nav-inner">
+      <a class="brand" href="index.html" aria-label="Layer & Laser home">
+        <img src="assets/logo.jpg" alt="Layer & Laser logo" />
+        <div style="min-width:0">
+          <div class="name">Layer & Laser</div>
+          <div class="badges">
+            <span class="badge"><span class="dot"></span>MADE IN THE NT</span>
+            <span class="badge">3D PRINTING &amp; ENGRAVING</span>
+          </div>
+        </div>
+      </a>
+
+      <button class="nav-btn" type="button" data-navbtn aria-expanded="false" aria-controls="menu">Menu</button>
+
+      <nav id="menu" class="menu" data-menu>
+          <a href="index.html">Home</a>
+          <a href="weddings.html" aria-current="page">Weddings</a>
+          <a href="wedding-order.html">Wedding Form</a>
+          <a href="corporate.html">Corporate</a>
+          <a href="corporate-order.html">Corporate Form</a>
+          <a href="retail.html">Retail</a>
+          <a href="real-estate.html">Real Estate</a>
+          <a href="cafe.html">Café</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+
+<section class="hero">
+  <div class="container">
+    <div class="panel">
+      <h1 class="h1">Weddings</h1>
+      <p class="sub">Premium & rustic options for signage, tumblers and keepsakes.</p>
+      <div class="cta"><a class="btn secondary" href="index.html">Home</a><a class="btn " href="gallery.html">Gallery</a></div>
+    </div>
+  </div>
+</section>
+
+
+<main id="main">
+  <div class="container content-wrap">
+    <div class="panel">
+      <div class="prose">
+        <div class="page">
 <div class="topbar">
-<button class="btn primary" onclick="window.print()">Print / Save as PDF</button>
+<button class="btn primary">Print / Save as PDF</button>
 <div class="subtitle">Layer & Laser • Weddings • Humpty Doo, NT</div>
 </div>
 
@@ -253,5 +225,22 @@ td{border-bottom:1px solid var(--paper-line) !important;}
 <div class="subtitle">Quote valid 14 days • Prices in AUD</div>
 </div>
 </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="chip"><strong style="color:var(--text)">Layer &amp; Laser</strong> • Humpty Doo, NT</div>
+      <div class="chip"><strong style="color:var(--text)">Phone:</strong> 0459289044</div>
+      <div class="chip"><strong style="color:var(--text)">Email:</strong> layerandlaser1@gmail.com</div>
+    </div>
+    <p style="margin:12px 0 0">Minimum charge $25 AUD • Quote valid for 14 days • Made in the NT</p>
+  </div>
+</footer>
+
+
 </body>
 </html>
