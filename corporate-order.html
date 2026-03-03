@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Layer & Laser — Corporate Order Form</title>
+<style>
+:root{
+--bg:#0b0f14; --card:#121826; --text:#e8eefc; --muted:#a9b4cc; --line:#26324a;
+--accent:#7dffb2; --nt:#ff6a00;
+--paper:#ffffff; --ink:#111; --ink-muted:#333; --paper-line:#ddd;
+}
+*{box-sizing:border-box}
+body{
+margin:0;
+font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+background: radial-gradient(1100px 600px at 12% 0%, rgba(255,106,0,.10), transparent 60%),
+radial-gradient(900px 600px at 92% 10%, rgba(125,255,178,.10), transparent 55%),
+var(--bg);
+color:var(--text);
+line-height:1.5;
+}
+.page{max-width:980px;margin:28px auto;padding:0 16px 64px}
+.hero{
+border:1px solid rgba(38,50,74,.9);
+border-radius:18px;
+padding:18px;
+background: rgba(18,24,38,.92);
+text-align:center;
+}
+.badges{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:10px}
+.badge{
+display:inline-flex;align-items:center;gap:8px;
+padding:8px 12px;border-radius:999px;
+border:1px solid rgba(38,50,74,.9);
+background: rgba(11,15,20,.35);
+font-weight:900;letter-spacing:.8px;font-size:12px;
+}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--nt);box-shadow:0 0 0 4px rgba(255,106,0,.15)}
+h1{margin:8px 0 0;font-size:22px}
+.sub{margin:6px 0 0;color:var(--muted);font-size:13px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
+.card{
+background: rgba(18,24,38,.92);
+border:1px solid rgba(38,50,74,.9);
+border-radius:18px;
+padding:18px;
+}
+h2{margin:0 0 10px;font-size:16px}
+label{display:block;font-size:13px;color:var(--muted);margin:10px 0 6px}
+input, select, textarea{
+width:100%;
+border-radius:12px;
+border:1px solid rgba(38,50,74,.9);
+background: rgba(11,15,20,.35);
+color:var(--text);
+padding:10px 12px;
+outline:none;
+font-size:14px;
+}
+textarea{min-height:92px;resize:vertical}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.btnbar{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+button{
+border:1px solid rgba(38,50,74,.9);
+background: rgba(11,15,20,.35);
+color:var(--text);
+padding:10px 12px;
+border-radius:12px;
+font-weight:900;
+cursor:pointer;
+font-size:13px;
+}
+button.primary{
+border-color: rgba(125,255,178,.35);
+background: rgba(125,255,178,.12);
+}
+button.danger{
+border-color: rgba(255,122,122,.35);
+background: rgba(255,122,122,.10);
+}
+table{
+width:100%;
+border-collapse:collapse;
+border:1px solid rgba(38,50,74,.9);
+border-radius:14px;
+overflow:hidden;
+margin-top:10px;
+}
+th,td{
+padding:10px 10px;
+border-bottom:1px solid rgba(38,50,74,.75);
+text-align:left;
+font-size:13px;
+}
+th{
+background: rgba(11,15,20,.45);
+color: var(--muted);
+text-transform:uppercase;
+letter-spacing:.6px;
+font-size:12px;
+font-weight:900;
+}
+tr:last-child td{border-bottom:none}
+.small{color:var(--muted);font-size:12px;margin-top:8px}
+.footer{
+margin-top:16px;
+display:flex;gap:10px;flex-wrap:wrap;justify-content:space-between;
+color:var(--muted);font-size:12px;
+}
+.chip{
+border:1px solid rgba(38,50,74,.9);
+background: rgba(11,15,20,.35);
+padding:8px 10px;border-radius:12px;
+}
+@media (max-width: 920px){
+.grid{grid-template-columns:1fr}
+.row{grid-template-columns:1fr}
+}
+
+/* PRINT FRIENDLY */
+@media print{
+body{background:var(--paper)!important;color:var(--ink)!important}
+.hero,.card{background:var(--paper)!important;border:1px solid var(--paper-line)!important}
+input,select,textarea{background:#fff!important;color:var(--ink)!important;border-color:var(--paper-line)!important}
+th{background:#fff!important;color:var(--ink-muted)!important;border-bottom:1px solid var(--paper-line)!important}
+td{border-bottom:1px solid var(--paper-line)!important}
+.badge,.chip,button{display:none!important}
+.sub,.small,.footer{color:var(--ink-muted)!important}
+.page{margin:0;max-width:none;padding:0 10mm}
+}
+</style>
+</head>
+<body>
+<div class="page">
+<section class="hero">
+<div class="badges">
+<div class="badge"><span class="dot"></span>MADE IN THE NT</div>
+<div class="badge"><span class="dot" style="background: var(--accent); box-shadow: 0 0 0 4px rgba(125,255,178,.15);"></span>CORPORATE ORDER FORM</div>
+</div>
+<h1>Layer & Laser — Corporate Order Form</h1>
+<p class="sub">Fill it out → Download CSV → Email it to: <strong style="color:var(--text)">layerandlaser1@gmail.com</strong></p>
+</section>
+
+<div class="grid">
+<section class="card">
+<h2>Company & Job Details</h2>
+
+<div class="row">
+<div>
+<label for="orderRef">Order Reference (optional)</label>
+<input id="orderRef" placeholder="e.g. CORP-014" />
+</div>
+<div>
+<label for="requiredBy">Required By (date)</label>
+<input id="requiredBy" type="date" />
+</div>
+</div>
+
+<label for="companyName">Company Name</label>
+<input id="companyName" placeholder="e.g. Example Plumbing Pty Ltd" />
+
+<div class="row">
+<div>
+<label for="contactName">Contact Name</label>
+<input id="contactName" placeholder="e.g. Chris Smith" />
+</div>
+<div>
+<label for="contactPhone">Contact Phone</label>
+<input id="contactPhone" placeholder="e.g. 0400 000 000" />
+</div>
+</div>
+
+<label for="contactEmail">Contact Email</label>
+<input id="contactEmail" placeholder="e.g. admin@company.com" />
+
+<div class="row">
+<div>
+<label for="suppliedBy">Drinkware Supplied By</label>
+<select id="suppliedBy">
+<option value="Customer">Customer</option>
+<option value="Layer & Laser">Layer & Laser (quote required)</option>
+</select>
+</div>
+<div>
+<label for="qty">Total Quantity</label>
+<input id="qty" type="number" min="1" placeholder="e.g. 30" />
+</div>
+</div>
+
+<div class="row">
+<div>
+<label for="drinkwareType">Drinkware Type</label>
+<input id="drinkwareType" placeholder="e.g. YETI 590ml / Other brand" />
+</div>
+<div>
+<label for="drinkwareColour">Drinkware Colour</label>
+<input id="drinkwareColour" placeholder="e.g. Matte Black" />
+</div>
+</div>
+
+<div class="row">
+<div>
+<label for="designType">Design Type</label>
+<select id="designType">
+<option value="Logo Only">Logo Only</option>
+<option value="Logo + Name">Logo + Name</option>
+<option value="Name Only">Name Only</option>
+<option value="Other">Other</option>
+</select>
+</div>
+<div>
+<label for="logoProvided">Logo File Provided?</label>
+<select id="logoProvided">
+<option value="Yes">Yes</option>
+<option value="No">No (needs setup/redraw)</option>
+</select>
+</div>
+</div>
+
+<div class="row">
+<div>
+<label for="logoType">Logo File Type</label>
+<select id="logoType">
+<option value="SVG">SVG</option>
+<option value="AI">AI</option>
+<option value="EPS">EPS</option>
+<option value="PDF (vector)">PDF (vector)</option>
+<option value="PNG">PNG</option>
+<option value="JPG">JPG</option>
+<option value="Unknown">Unknown</option>
+</select>
+</div>
+<div>
+<label for="logoPlacement">Logo Placement</label>
+<select id="logoPlacement">
+<option value="Front">Front</option>
+<option value="Back">Back</option>
+<option value="Opposite Name">Opposite Name</option>
+<option value="Wrap">Wrap</option>
+<option value="Other">Other</option>
+</select>
+</div>
+</div>
+
+<div class="row">
+<div>
+<label for="logoSize">Logo Size</label>
+<select id="logoSize">
+<option value="Standard">Standard</option>
+<option value="Small">Small</option>
+<option value="Large">Large</option>
+<option value="Custom">Custom</option>
+</select>
+</div>
+<div>
+<label for="includeNames">Include Individual Names?</label>
+<select id="includeNames">
+<option value="No">No</option>
+<option value="Yes">Yes</option>
+</select>
+</div>
+</div>
+
+<div class="row">
+<div>
+<label for="nameFont">Name Font Choice (if names included)</label>
+<input id="nameFont" placeholder="e.g. Modern Sans" />
+</div>
+<div>
+<label for="namePlacement">Name Placement</label>
+<select id="namePlacement">
+<option value="Opposite Logo">Opposite Logo</option>
+<option value="Below Logo">Below Logo</option>
+<option value="Same Side as Logo">Same Side as Logo</option>
+<option value="Wrap">Wrap</option>
+<option value="Other">Other</option>
+</select>
+</div>
+</div>
+
+<label for="notes">Notes</label>
+<textarea id="notes" placeholder="Anything important: split colours, departments, icons, deadlines, pickup/shipping, etc."></textarea>
+
+<div class="btnbar">
+<button class="primary" type="button" onclick="downloadCSV()">Download CSV</button>
+<button type="button" onclick="window.print()">Print</button>
+<button class="danger" type="button" onclick="clearAll()">Clear Form</button>
+</div>
+
+<div class="small">
+Tip: If names are required, add them in the “Names List” section on the right before downloading.
+</div>
+</section>
+
+<section class="card">
+<h2>Names List (Optional)</h2>
+<p class="sub">Add as many names as needed. If you don’t need names, leave empty.</p>
+
+<div class="row">
+<div>
+<label for="nameInput">Name</label>
+<input id="nameInput" placeholder="e.g. Alex" />
+</div>
+<div>
+<label for="deptInput">Department / Role (optional)</label>
+<input id="deptInput" placeholder="e.g. Supervisor" />
+</div>
+</div>
+
+<div class="row">
+<div>
+<label for="placementInput">Placement</label>
+<select id="placementInput">
+<option value="Opposite Logo">Opposite Logo</option>
+<option value="Below Logo">Below Logo</option>
+<option value="Same Side as Logo">Same Side as Logo</option>
+<option value="Other">Other</option>
+</select>
+</div>
+<div>
+<label for="itemTypeInput">Item Type</label>
+<select id="itemTypeInput">
+<option value="Tumbler">Tumbler</option>
+<option value="Bottle">Bottle</option>
+<option value="Mug">Mug</option>
+<option value="Other">Other</option>
+</select>
+</div>
+</div>
+
+<label for="nameNotesInput">Notes (optional)</label>
+<input id="nameNotesInput" placeholder="e.g. use ALL CAPS / special characters" />
+
+<div class="btnbar">
+<button type="button" class="primary" onclick="addName()">Add Name</button>
+<button type="button" onclick="removeLast()">Remove Last</button>
+<button type="button" onclick="clearNames()">Clear Names</button>
+</div>
+
+<table aria-label="Names table">
+<thead>
+<tr>
+<th>#</th>
+<th>ItemType</th>
+<th>Name</th>
+<th>Dept/Role</th>
+<th>Placement</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody id="namesBody"></tbody>
+</table>
+
+<div class="small">
+When finished, click <strong>Download CSV</strong> on the left. The CSV will include both the job details + names list.
+</div>
+</section>
+</div>
+
+<div class="footer">
+<div class="chip"><strong>Layer & Laser</strong> • Humpty Doo, NT</div>
+<div class="chip"><strong>Phone:</strong> 0459289044</div>
+<div class="chip"><strong>Email:</strong> layerandlaser1@gmail.com</div>
+</div>
+</div>
+
+<script>
+const names = [];
+
+function escCSV(value){
+const s = (value ?? "").toString();
+if (/[",\n]/.test(s)) return `"${s.replace(/"/g,'""')}"`;
+return s;
+}
+
+function getVal(id){ return document.getElementById(id).value.trim(); }
+
+function addName(){
+const name = getVal('nameInput');
+if(!name){ alert('Please enter a name.'); return; }
+names.push({
+itemType: getVal('itemTypeInput') || 'Tumbler',
+individualName: name,
+dept: getVal('deptInput'),
+placement: getVal('placementInput') || 'Opposite Logo',
+notes: getVal('nameNotesInput')
+});
+document.getElementById('nameInput').value = '';
+document.getElementById('deptInput').value = '';
+document.getElementById('nameNotesInput').value = '';
+renderNames();
+}
+
+function removeLast(){
+names.pop();
+renderNames();
+}
+
+function clearNames(){
+names.length = 0;
+renderNames();
+}
+
+function renderNames(){
+const body = document.getElementById('namesBody');
+body.innerHTML = '';
+names.forEach((n, i) => {
+const tr = document.createElement('tr');
+tr.innerHTML = `
+<td>${i+1}</td>
+<td>${n.itemType}</td>
+<td>${n.individualName}</td>
+<td>${n.dept || ''}</td>
+<td>${n.placement}</td>
+<td>${n.notes || ''}</td>
+`;
+body.appendChild(tr);
+});
+}
+
+function downloadCSV(){
+const header1 = [
+"OrderRef","CompanyName","ContactName","ContactPhone","ContactEmail","RequiredByDate",
+"DrinkwareSuppliedBy","TotalQuantity","DrinkwareType","DrinkwareColour",
+"DesignType","LogoFileProvided","LogoFileType","LogoPlacement","LogoSize",
+"IncludeIndividualNames","NameFontChoice","NamePlacement","Notes"
+];
+
+const row1 = [
+getVal('orderRef'),
+getVal('companyName'),
+getVal('contactName'),
+getVal('contactPhone'),
+getVal('contactEmail'),
+getVal('requiredBy'),
+getVal('suppliedBy'),
+getVal('qty'),
+getVal('drinkwareType'),
+getVal('drinkwareColour'),
+getVal('designType'),
+getVal('logoProvided'),
+getVal('logoType'),
+getVal('logoPlacement'),
+getVal('logoSize'),
+getVal('includeNames'),
+getVal('nameFont'),
+getVal('namePlacement'),
+getVal('notes')
+];
+
+if(!row1[1]){ alert("Please enter Company Name before downloading."); return; }
+if(!row1[2]){ alert("Please enter Contact Name before downloading."); return; }
+if(!row1[4]){ alert("Please enter Contact Email before downloading."); return; }
+if(!row1[7]){ alert("Please enter Total Quantity before downloading."); return; }
+
+let csv = '';
+csv += header1.map(escCSV).join(',') + '\n';
+csv += row1.map(escCSV).join(',') + '\n\n';
+
+csv += ["ItemID","ItemType","IndividualName","DepartmentOrRole","Placement","Notes"].join(',') + '\n';
+names.forEach((n, i) => {
+const r = [
+(i+1).toString(),
+n.itemType,
+n.individualName,
+n.dept,
+n.placement,
+n.notes
+];
+csv += r.map(escCSV).join(',') + '\n';
+});
+
+const company = (getVal('companyName') || 'Company').replace(/[^a-z0-9]+/gi,'_').replace(/^_+|_+$/g,'');
+const ref = (getVal('orderRef') || 'Corporate_Order').replace(/[^a-z0-9]+/gi,'_');
+const filename = `LayerAndLaser_${company}_${ref}.csv`;
+
+const blob = new Blob([csv], {type: 'text/csv;charset=utf-8;'});
+const url = URL.createObjectURL(blob);
+const a = document.createElement('a');
+a.href = url;
+a.download = filename;
+document.body.appendChild(a);
+a.click();
+a.remove();
+URL.revokeObjectURL(url);
+}
+
+function clearAll(){
+if(!confirm('Clear all fields and names?')) return;
+[
+'orderRef','requiredBy','companyName','contactName','contactPhone','contactEmail',
+'qty','drinkwareType','drinkwareColour','nameFont','notes'
+].forEach(id => document.getElementById(id).value = '');
+['suppliedBy','designType','logoProvided','logoType','logoPlacement','logoSize','includeNames','namePlacement']
+.forEach(id => document.getElementById(id).selectedIndex = 0);
+clearNames();
+}
+</script>
+</body>
+</html>
